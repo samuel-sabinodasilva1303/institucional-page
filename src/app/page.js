@@ -13,9 +13,7 @@ export default function Home() {
       <nav></nav>
       <main className={styles.main}>
         <SearchButton />
-        <Residence />
         <AboutHome />
-        <Newsletter />
       </main>
       <Footer />
     </div>
