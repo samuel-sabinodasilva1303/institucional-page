@@ -1,8 +1,6 @@
 {
   "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/about/page": "app/about/page.js",
-  "/residences/page": "app/residences/page.js",
   "/contact/page": "app/contact/page.js",
   "/newsletter/page": "app/newsletter/page.js"
 }

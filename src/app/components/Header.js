@@ -19,10 +19,9 @@ export default function Header() {
                     width={150}
                     height={30} 
                 />
-                <Link href="/about">About</Link>
-                <Link href="/residences">Residences</Link>
+                <Link href="/">Home</Link>
                 <Link href="/contact">Contact</Link>
-                <Link href="/newsletter">Newsletter</Link>
+                <Link href="/about">About</Link>
                 <select>
                     <option>Language</option>
                     <option>Português</option>

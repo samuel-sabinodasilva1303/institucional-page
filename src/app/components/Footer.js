@@ -42,10 +42,9 @@ export default function Footer() {
                   </a>
                 </div>
                 <div className={styles.footerlinks}>
-                  <Link href="/about">About</Link>
-                  <Link href="/residences">Residences</Link>
+                  <Link href="/">Home</Link>
                   <Link href="/contact">Contact</Link>
-                  <Link href="/newsletter">Newsletter</Link>
+                  <Link href="/about">About</Link>
                 </div>
                 <div className={styles.footercopy}>
                   <p>2024 MartinBaez All rights reserved | Privacy policies</p>

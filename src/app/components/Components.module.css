@@ -11,7 +11,7 @@
     margin: 0 auto;
     align-items: center;
     padding: 15px;
-    background: #D9D9D9;
+    background: #1C77F2;
 }
 .headerContent a, .footerlinks a{
     display: flex;
@@ -20,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
-    color: #000;
+    color: #ffffff;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
@@ -209,7 +209,7 @@
     height: 58px;
     flex-shrink: 0;
     border-radius: 10px;
-    background: #EEE;
+    background: #F2AF2F;
     color: #000;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -305,7 +305,7 @@
 .footercopy{
     display: grid;
     gap: 7px;
-    color: #000;
+    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 16px;
