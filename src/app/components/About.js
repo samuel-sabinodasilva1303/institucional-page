@@ -2,13 +2,19 @@
 
 import Image from 'next/image';
 import styles from './Components.module.css';
+import { useInView } from 'react-intersection-observer';
 
 export default function AboutHome() {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+      });
     return(
-        <div className={styles.aboutmain}>
+        <div ref={ref} className={`${styles.aboutmain} ${inView ? styles.fadeIn : styles.fadeOut}`}
+      >
             <div className={styles.aboutcontent}>
                 <Image 
-                    src="/images/persona.png" 
+                    src="/images/martinpersona.png" 
                     alt="Logo"
                     width={722}
                     height={876} 
@@ -16,8 +22,9 @@ export default function AboutHome() {
                 <div className={styles.aboutext}>
                     <strong>Martin Báez</strong>
                     <span>real estate agent</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy 
-                        text ever since the 1500s, when an unknown printer took a galley</p>
+                    <p>
+                        I’m Martin Báez, a Miami real estate agent offering personalized VIP service. I speak Spanish, English, and Portuguese, and I’m dedicated to helping you find your dream home with satisfaction in buying, selling, renting, or investing.
+                    </p>
                     <div className={styles.aboutinfos}>
                         <p>
                             <Image 

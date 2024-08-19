@@ -5,6 +5,19 @@
     flex-shrink: 0;
     background: #ffffff;
 }
+.aboutmain {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fadeIn {
+    opacity: 1;
+  }
+  
+  .fadeOut {
+    opacity: 0;
+  }
+
 .headerContent{
     display: flex;
     justify-content: center;
@@ -13,6 +26,7 @@
     padding: 15px;
     background: #1C77F2;
 }
+
 .headerContent a, .footerlinks a{
     display: flex;
     width: 223px;
@@ -28,6 +42,11 @@
     font-weight: 500;
     line-height: normal;
     text-decoration: none;
+}
+
+.headerContent a:hover, .footerlinks a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
 }
 
 .headerContent select{
@@ -92,14 +111,19 @@
     gap: 55px;
     align-items: center;
     justify-content: center;
-    padding-block: 12em;
+    padding-block: 6em;
 }
 .cardsitem{
     height: 336px;
     flex-shrink: 0;
     border-radius: 20px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.25);
     background: linear-gradient(134deg, #FFF5 7.87%, #F6F6F6 98.83%);
+}
+.cardsitem:hover{
+    transform: scale(1.1);
+}
+.cardsitem a{
+    text-decoration: none;
 }
 .cardsitens{
     height: 100%;
@@ -130,7 +154,7 @@
     line-height: normal;
 }
 .cardsitens p{
-    width: 366px;
+    width: 420px;
     height: 47px;
     flex-shrink: 0;
     color: #000;
@@ -146,6 +170,9 @@
 .aboutmain{
     flex-shrink: 0;
     background: linear-gradient(0deg, #FFFFFF35 60%, #E2E2E2FF 100%);
+    position: relative;
+    top: 4em;
+    z-index: -1;
 }
 .aboutcontent{
     display: flex;
@@ -162,7 +189,7 @@
     gap: 1em;
 }
 .aboutext strong{
-    color: #000;
+    color: #F2AF2F;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     font-style: normal;
@@ -186,6 +213,7 @@
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    margin-bottom: 1em;
 }
 .aboutinfos{
     display: flex;
@@ -221,8 +249,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transform: translate(50%, 30%);
 }
-
+.aboutredirect:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
 /**Newsletter**/
 .newsletter{
     max-width: 1400px;
@@ -296,6 +328,10 @@
     margin: 0 auto;
     width: 100%;
 }
+.footersocial a img:hover{
+    transform: scale(1.3);
+    opacity: 0.8;
+}
 .footersocial{
     display: flex;
     justify-content: center;
@@ -315,12 +351,331 @@
 }
 .footercopy p{
     margin-bottom: 8px;
-}
 
+}
+.footercopy p a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.footercopy p a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
 .footerlinks{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
     padding-top: 20px;
+}
+
+/*about page*/
+
+.aboutmainpage, .contactmainpage{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.aboutmainpage{
+    padding-top: 8em;
+}
+.aboutmainpageimage .aboutmainpageimageone{
+    width: 100%;
+}
+.aboutmainpagetext{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8em;
+}
+.aboutmainpageimagetwo{
+    position: relative;
+    bottom: 47em;
+    object-fit: contain;
+    display: flex;
+    transform: translate(50%);
+}
+.aboutmainpageimage{
+    height: 750px;
+}
+.aboutmainpageinfos h1{
+    color: var(--Color-5, #F2AF2F);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 43px;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.aboutmainpageinfos p{
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    width: 777px;
+    height: 286px;
+    flex-shrink: 0;
+    line-height: 140%;
+}
+.aboutmainpageinfos p strong{
+    font-weight: 600;
+
+}
+.aboutmainpagetext .aboutinfos p{
+    margin-bottom: 31px;
+}
+
+/*Contact page*/
+.contactmainpage h1{
+    width: 1055px;
+    height: 140px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.contactmainpage form div{
+    display: grid;
+    gap: 9px;
+}
+.contactmainpage form div input{
+    width: 865px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #797979;
+    background: #FFF;
+    padding: 0 15px;
+}
+.contactmainpage form div label{
+    margin-top: 1em;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.contactmainpage form button{
+    height: 58px;
+    border-radius: 10px;
+    background: #F2AF2F;
+    border: none;
+    margin: 50px;
+    transform: translate(50%);
+    width: 359px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    cursor: pointer;
+}
+.contactmainpage form button:hover{
+    opacity: 0.8;
+}
+
+@media (max-width: 768px){
+    .footerlinks{
+        flex-wrap: wrap;
+    }
+    .aboutcontent > img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 3em;
+    }
+    .aboutcontent{
+        bottom: 0em;
+        flex-wrap: wrap;
+    }
+    .aboutredirect{
+        transform: translate(4%, -23%);
+    }
+    .footercopy{
+        width: 94%;
+        margin: 0 auto;
+    }
+    .aboutext{
+        padding: 0 10px;
+    }
+    .cardsmain{
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    .cardsitem{
+        width: 100%;
+    }
+    .cardsitens span{
+        width: 95%;
+    }
+    .cardsitens p{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .aboutmain{
+        margin-top: 5em;
+    }
+    .contactmainpage form div input{
+        width: 100%;
+    }
+    .contactmainpage h1{
+        width: 100%;
+        height: auto;
+        font-size: 29px;
+    }
+    .contactmainpage form button{
+        transform: translate(-5%);
+    }
+    .contactmainpage{
+        padding: 0 10px;
+    }
+    .aboutmainpagetext{
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+    .aboutmainpageinfos p{
+        width: 100%;
+        height: auto;
+    }
+    .aboutmainpageimageone{
+        height: 480px;
+    }
+    .aboutmainpageimagetwo{
+        bottom: 40em;
+        width: 100%;
+        transform: translate(0%);
+    }
+    .aboutmainpageimage{
+        height: 530px;
+    }
+
+    .dropdownMenu{
+        width: 61.9% !important;
+    }
+}
+
+.headerContainer {
+    position: relative;
+    width: 100%;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: #1C77F2;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.mobileMenu.open {
+    display: flex;
+}
+
+.desktopMenu {
+    display: flex;
+    gap: 20px;
+}
+.hamburger{
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .swiperContainer{
+        height: 214px;
+    }
+    .banner{
+        height: auto !important;
+    }
+    .dropdownItem{
+        width: 84% !important;
+    }
+    .headerContent a{
+        text-align: justify;
+    }
+    .desktopMenu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    .headerContent{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+.customSelect {
+    position: relative;
+    display: inline-block;
+}
+
+.customSelect button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-flow: row-reverse;
+    gap: 1em;
+    justify-content: center;
+    width: 238px;
+    height: 58px;
+    flex-shrink: 0;
+    border-radius: 10px 10px 10px 10px;
+    background: #FFF;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.dropdownMenu {
+    position: absolute;
+    background: white;
+    top: 87%;
+    left: 0;
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+.dropdownItem {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    flex-flow: row-reverse;
+    gap: 1em;
+    width: 93%;
+}
+
+.dropdownItem:hover {
+    background: #f0f0f0;
 }

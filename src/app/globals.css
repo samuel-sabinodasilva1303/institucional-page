@@ -5,8 +5,13 @@
 }
 
 .swiper-pagination-bullet-active{
-  background: #696969 !important;
+  background: #F2AF2F !important;
 }
 footer{
   background: #1C77F2;
+}
+@media (max-width: 768px){
+  footer{
+    margin-top: 5em;
+  }
 }
